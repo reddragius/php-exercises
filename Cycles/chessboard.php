@@ -5,7 +5,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Chessboard</title>
-</head>
 	<style>
 		table {
 			border-collapse: collapse;
@@ -25,6 +24,7 @@
 			border: 1px solid #000;
 		}
 	</style>
+</head>
 <body>
 	<h1>Chessboard</h1>
 	<?php

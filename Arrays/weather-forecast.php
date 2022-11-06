@@ -53,41 +53,24 @@
 			],
 		];
 
-		echo "<h2>Praha</h2>";
-		echo "<table border = 1>";
-		echo "<tr> <th>Datum</th> <th>Teplota</th> <th>Popis</th> </tr>";
 		foreach ($cities as $city => $arrayDates)
 		{	
-			if ($city == "Praha")
+			if ($city == "Praha" || $city == "Brno")
+			//show only Prague and Brno keys
 			{	
+				echo "<h2>$city</h2>";
+				echo "<table border = 1>";
+				echo "<tr> <th>Datum</th> <th>Teplota</th> <th>Popis</th> </tr>";
 				foreach ($arrayDates as $date => $arrayValues)
 				{	
 					echo "<tr> <td>$date</td> <td>{$arrayValues["temperature"]}</td> <td>{$arrayValues["description"]}</td> </tr>";
 				};
-			};
+				echo "</table>";
+			}
 		};
-		echo "</table>";
-
-		echo "<h2>Brno</h2>";
-		echo "<table border = 1>";
-		echo "<tr> <th>Datum</th> <th>Teplota</th> <th>Popis</th> </tr>";
-		foreach ($cities as $city => $arrayDates)
-		{	
-			if ($city == "Brno")
-			{	
-				foreach ($arrayDates as $date => $arrayValues)
-				{	
-					echo "<tr> <td>$date</td> <td>{$arrayValues["temperature"]}</td> <td>{$arrayValues["description"]}</td> </tr>";
-				};
-			};
-		};
-		echo "</table>";
 		
 		echo "<h2>Content of the Arrays</h2>";
 		var_dump($cities);
-		var_dump(count($cities));
-		var_dump(count($arrayDates));
-		var_dump(count($arrayValues));
 	?>
 </body>
 </html>

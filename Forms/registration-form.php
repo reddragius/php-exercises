@@ -99,7 +99,7 @@
 				<label>Věk <input type="number" name="age" value="<?php echo $age; ?>"></label>
 				<span class="error"><?php if (array_key_exists("age", $arrayError)) {echo $arrayError["age"];} ?></span><br>
 				<label>Pohlaví 
-					<select id="" name="gender" value="gender">
+					<select id="" name="gender">
 						<option value="">-- Vyberte --</option>
 
 						<?php
